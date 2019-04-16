@@ -14,7 +14,7 @@ namespace ServiceNowConnect
 		{
 			try
 			{
-				Response.Write( "Connection String: " + Environment.GetEnvironmentVariable( "SQLAZURECONNSTR_DefaultConnectionString" ) );
+				Response.Write( "Connection String: " + Environment.GetEnvironmentVariable( "ServiceNowConnectConnectionString" ) );
 			}
 			catch( Exception ex )
 			{
