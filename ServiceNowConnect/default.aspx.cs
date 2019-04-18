@@ -14,7 +14,7 @@ namespace ServiceNowConnect
 		{
 			try
 			{
-				//Get ConnectionString
+				//Get ConnectionStrings
 				string connstringName = "SQLAZURECONNSTRING_ServiceNowDBConnectionString";
 				string envConnString = "";
 				string appConnString = "";
