@@ -15,7 +15,34 @@ namespace ServiceNowConnect
 			try
 			{
 				//Get ConnectionString
-				Response.Write( "Connection String: " + Environment.GetEnvironmentVariable( "ServiceNowDBConnectionString" ) );
+				string connstringName = "SQLAZURECONNSTRING_ServiceNowDBConnectionString";
+				string envConnString = "";
+				string appConnString = "";
+
+				try
+				{
+					envConnString = Environment.GetEnvironmentVariable( connstringName );
+				}
+				catch
+				{
+					envConnString = "Environment Variable " + connstringName + " not found!";
+				}
+
+				try
+				{
+					appConnString = ConfigurationManager.ConnectionStrings[ connstringName ].ConnectionString;
+				}
+				catch
+				{
+					appConnString = "Config Connection String " + connstringName + " not found!";
+				}
+
+				Response.Write( "Connection String With Environment Variable " + connstringName + " : " + envConnString + "</br></br>" );
+
+				Response.Write( "Connection String With Web.Config Connection String " + connstringName + " : " + appConnString + "</br></br>" );
+
+
+
 			}
 			catch( Exception ex )
 			{
