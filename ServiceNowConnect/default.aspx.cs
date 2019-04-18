@@ -14,7 +14,7 @@ namespace ServiceNowConnect
 		{
 			try
 			{
-				//add comentsa
+				//Get ConnectionString
 				Response.Write( "Connection String: " + Environment.GetEnvironmentVariable( "ServiceNowDBConnectionString" ) );
 			}
 			catch( Exception ex )
