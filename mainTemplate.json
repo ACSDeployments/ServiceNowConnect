@@ -309,22 +309,22 @@
 			}
 	      },
 	      "resources": [
-	        {
-	          "apiVersion": "2015-08-01",
-	          "name": "[concat(parameters('siteWebAppName'),'/web')]",
-			  "location": "[parameters('resourcesLocation')]",
-	          "type": "Microsoft.Web/sites/config",
-	          "dependsOn": [
-	            "[resourceId('Microsoft.Web/Sites', parameters('siteWebAppName'))]"
-	          ],
-	          "properties": {
-	            "RepoUrl": "[parameters('siteWebAppRepoURL')]",
-	            "branch": "[parameters('siteWebAppRepoBranch')]",
-	            "IsManualIntegration": "[parameters('siteWebAppRepoIsManualIntegration')]" ,
-				"deploymentRollbackEnabled": "[parameters('siteWebAppRepoDeploymentRollbackEnabled')]" ,
-    			"isMercurial": "[parameters('siteWebAppRepoIsMercurial')]" 
-	          }
-	        },
+			{
+				"apiVersion": "2018-02-01",
+				"name": "[concat(parameters('siteWebAppName'),'/web')]",
+				"location": "[parameters('resourcesLocation')]",
+				"type": "Microsoft.Web/sites/sourcecontrols",
+				"dependsOn": [
+					"[resourceId('Microsoft.Web/Sites', parameters('siteWebAppName'))]"
+				],
+				"properties": {
+					"repoUrl": "[parameters('siteWebAppRepoURL')]",
+					"branch": "[parameters('siteWebAppRepoBranch')]",
+					"IsManualIntegration": "[parameters('siteWebAppRepoIsManualIntegration')]",
+					"deploymentRollbackEnabled": "[parameters('siteWebAppRepoDeploymentRollbackEnabled')]",
+					"isMercurial": "[parameters('siteWebAppRepoIsMercurial')]"
+				}
+			},
 			{
 	          "apiVersion": "2015-08-01",
 	          "type": "config",
