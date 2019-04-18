@@ -334,8 +334,8 @@
 	          ],
 	          "properties": {
 	            "[parameters('siteWebAppConfigurationConnectionStringName')]": {
-	              "value": "[concat('Data Source=tcp:', reference(concat('Microsoft.Sql/servers/', parameters('sqlServerName'))).fullyQualifiedDomainName, ',1433;Initial Catalog=', parameters('sqlServerDatabaseName'), ';User Id=', parameters('sqlServerLogin'), '@', reference(concat('Microsoft.Sql/servers/', parameters('sqlServerName'))).fullyQualifiedDomainName, ';Password=', parameters('sqlServerPassword'), ';')]",
-	              "type": "SQLAzure"
+	              	"value": "[concat('Data Source=tcp:', reference(concat('Microsoft.Sql/servers/', parameters('sqlServerName'))).fullyQualifiedDomainName, ',1433;Initial Catalog=', parameters('sqlServerDatabaseName'), ';User Id=', parameters('sqlServerLogin'), '@', reference(concat('Microsoft.Sql/servers/', parameters('sqlServerName'))).fullyQualifiedDomainName, ';Password=', parameters('sqlServerPassword'), ';')]",
+					"type": "SQLServer"
 	            }
 	          }
 	        }
