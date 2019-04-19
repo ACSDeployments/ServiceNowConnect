@@ -14,6 +14,10 @@
 			&nbsp;&nbsp;&nbsp;&nbsp;<strong>Connection String:</strong><asp:Label ID="_lblConnectionString" runat="server"></asp:Label>
 			<br />
 			<br />
+			<br /><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;<strong>Directory Path:</strong><asp:Label ID="_lblDirectoryPath" runat="server"></asp:Label>
+			<br />
+			<br />
 			<strong>Next Steps</strong>
 			<br /><br />
 			&nbsp;&nbsp;&nbsp;&nbsp;1. Check if there are no tables. If not, this is a new setup.
@@ -25,6 +29,18 @@
 			&nbsp;&nbsp;&nbsp;&nbsp;4. Start the WebJob?
 			<br />
         </div>
+		<br /><br />
+		<strong>Database Restore Steps</strong>
+		<br /><br />
+		DB Server: <asp:TextBox ID="_txtRestoreDBServer" runat="server"></asp:TextBox>
+		<br />
+		DB Server Login: <asp:TextBox ID="_txtRestoreDBServerLogin" runat="server"></asp:TextBox>
+		<br />
+		DB Server Password: <asp:TextBox ID="_txtRestoreDBServerPassword" runat="server"></asp:TextBox>
+		<br />
+		<asp:Button ID="_btnRestoreDB" runat="server" />
+		<br /><br />
+		<asp:TextBox ID="_txtRestoreDBLog" TextMode="MultiLine" runat="server" Width="700" Height="250"></asp:TextBox>
     </form>
 </body>
 </html>
