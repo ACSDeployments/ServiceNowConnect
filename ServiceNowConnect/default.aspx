@@ -8,7 +8,22 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+		<br /><br /><br />
+		<div align="center">
+		<fieldset style="width:500px;">
+			<legend>ServiceNow Connect Setup - <strong>Step 1</strong></legend>
+			<br /><br />
+			<div>
+			<asp:Label ID="_lblLicenseKey" runat="server" Text="License Key:" Font-Bold="true"></asp:Label>	: <asp:TextBox ID="_txtLicenseKey" runat="server"></asp:TextBox>
+			<br /><br /><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="_btnRestoreDB" runat="server" Text="Next (Actually restores DB from bacpac)" />
+			<br /><br />
+
+		</div>
+		</fieldset>
+			</div>
+		<br /><br /><br />
+        <div style="visibility:hidden;">
 			DB Connection Read From Azure Configuration of the Web App/SQL Server and SQL DB that was dynamically generated during the deployment.
 			<br /><br />
 			&nbsp;&nbsp;&nbsp;&nbsp;<strong>Connection String:</strong><asp:Label ID="_lblConnectionString" runat="server"></asp:Label>
@@ -38,8 +53,7 @@
 		<br />
 		DB Server Password: <asp:TextBox ID="_txtRestoreDBServerPassword" runat="server"></asp:TextBox>
 		<br />
-		<asp:Button ID="_btnRestoreDB" runat="server" />
-		<br /><br />
+		
 		<asp:TextBox ID="_txtRestoreDBLog" TextMode="MultiLine" runat="server" Width="700" Height="250"></asp:TextBox>
     </form>
 </body>

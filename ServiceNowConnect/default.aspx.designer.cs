@@ -22,6 +22,33 @@ namespace ServiceNowConnect {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
+        /// _lblLicenseKey control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label _lblLicenseKey;
+        
+        /// <summary>
+        /// _txtLicenseKey control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox _txtLicenseKey;
+        
+        /// <summary>
+        /// _btnRestoreDB control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button _btnRestoreDB;
+        
+        /// <summary>
         /// _lblConnectionString control.
         /// </summary>
         /// <remarks>
@@ -65,15 +92,6 @@ namespace ServiceNowConnect {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox _txtRestoreDBServerPassword;
-        
-        /// <summary>
-        /// _btnRestoreDB control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button _btnRestoreDB;
         
         /// <summary>
         /// _txtRestoreDBLog control.
