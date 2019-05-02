@@ -9,6 +9,7 @@
 <body>
     <form id="form1" runat="server">
 		<br /><br /><br />
+		<br />
 		<div align="center">
 		<fieldset style="width:500px;">
 			<legend>ServiceNow Connect Setup - <strong>Step 1</strong></legend>
